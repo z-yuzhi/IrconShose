@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09809E19-9AEB-43C2-A569-A8DE63E4C4E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IronShoes</RootNamespace>
+    <AssemblyName>IronShoes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=8.8.0.6, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalReference\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>ExternalReference\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cfg\xml.cs" />
+    <Compile Include="clsAreaConfig.cs" />
+    <Compile Include="clsCommons.cs" />
+    <Compile Include="clsWorkArea.cs" />
+    <Compile Include="data\DBDefine.cs" />
+    <Compile Include="data\DBUserInfo.cs" />
+    <Compile Include="data\InterfaceDB.cs" />
+    <Compile Include="data\InterfaceDBUser.cs" />
+    <Compile Include="data\MySQLDBImplSQL.cs" />
+    <Compile Include="Element\clsDHSignal.cs" />
+    <Compile Include="Element\clsDrawElements.cs" />
+    <Compile Include="Element\clsDSignal.cs" />
+    <Compile Include="Element\clsEleFork.cs" />
+    <Compile Include="Element\clsElements.cs" />
+    <Compile Include="Element\clsElePath.cs" />
+    <Compile Include="Element\clsImageElements.cs" />
+    <Compile Include="Element\clsINode.cs" />
+    <Compile Include="Element\clsONode.cs" />
+    <Compile Include="Element\clsSHSignal.cs" />
+    <Compile Include="Element\clsSignalElements.cs" />
+    <Compile Include="Element\clsSSignal.cs" />
+    <Compile Include="Element\clsStyle.cs" />
+    <Compile Include="entity\JcTerminal.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrawTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrawTools.Designer.cs">
+      <DependentUpon>frmDrawTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFactory.cs" />
+    <Compile Include="frmPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPicture.Designer.cs">
+      <DependentUpon>frmPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShoesApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShoesApply.Designer.cs">
+      <DependentUpon>frmShoesApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemConfig.Designer.cs">
+      <DependentUpon>frmSystemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemSet.Designer.cs">
+      <DependentUpon>frmSystemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalDefine.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysConfig.cs" />
+    <Compile Include="until\File.cs" />
+    <Compile Include="UserControls\UserControlEquipmentManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlEquipmentManage.Designer.cs">
+      <DependentUpon>UserControlEquipmentManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlPersonManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlPersonManage.Designer.cs">
+      <DependentUpon>UserControlPersonManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlRailwayMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlRailwayMon.Designer.cs">
+      <DependentUpon>UserControlRailwayMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlTernOnTheWay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlTernOnTheWay.Designer.cs">
+      <DependentUpon>UserControlTernOnTheWay.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrawTools.resx">
+      <DependentUpon>frmDrawTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPicture.resx">
+      <DependentUpon>frmPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShoesApply.resx">
+      <DependentUpon>frmShoesApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemConfig.resx">
+      <DependentUpon>frmSystemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemSet.resx">
+      <DependentUpon>frmSystemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\UserControlEquipmentManage.resx">
+      <DependentUpon>UserControlEquipmentManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlPersonManage.resx">
+      <DependentUpon>UserControlPersonManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlRailwayMon.resx">
+      <DependentUpon>UserControlRailwayMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlTernOnTheWay.resx">
+      <DependentUpon>UserControlTernOnTheWay.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\IronShoes.entity.jcTerminal.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ooopic_1570691952.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Crosswise.png" />
+    <Content Include="Resources\DHSignal.png" />
+    <None Include="Resources\DHSignal1.png" />
+    <Content Include="Resources\drawtool.png" />
+    <None Include="Resources\drawtool1.png" />
+    <None Include="Resources\drawtool2.png" />
+    <Content Include="Resources\DSignal.png" />
+    <None Include="Resources\DSignal1.png" />
+    <None Include="Resources\DSignal2.png" />
+    <Content Include="Resources\INode.png" />
+    <None Include="Resources\INode1.png" />
+    <Content Include="Resources\ONode.png" />
+    <None Include="Resources\ONode1.png" />
+    <Content Include="Resources\Pointer.png" />
+    <None Include="Resources\SSignal1.png" />
+    <None Include="Resources\Pointer1.png" />
+    <Content Include="Resources\Rotate.png" />
+    <Content Include="Resources\SHSignal.png" />
+    <None Include="Resources\SHSignal1.png" />
+    <Content Include="Resources\SSignal.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
